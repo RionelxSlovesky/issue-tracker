@@ -40,6 +40,10 @@ const fetchIssues = () => {
   const issuesList = document.getElementById('issuesList');
   issuesList.innerHTML = '';
 
+  if(issues == undefined) {
+    return;
+  }
+
   for (var i = 0; i < issues.length; i++) {
     const {id, description, severity, assignedTo, status} = issues[i];
 
